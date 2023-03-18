@@ -111,9 +111,15 @@ else{
 				  <ul class="nav navbar-nav menu__list">
                     <li class=" menu__item"><a class="menu__link" href="index.php">Trang Chủ</a></li>
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=fooddog">Thức Ăn Chó</a></li>
+<<<<<<< HEAD
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkdog">Dụng Cụ chó</a></li>
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat">Thức Ăn Mèo</a></li>
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkmeo">Dụng Cụ Mèo</a></li>
+=======
+					<li class=" menu__item"><a class="menu__link" href="#">Dụng Cụ chó</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat">Thức Ăn Mèo</a></li>
+					<li class=" menu__item"><a class="menu__link" href="#">Dụng Cụ Mèo</a></li>
+>>>>>>> 2003158e71162cf1e893b7dfb9363e71fa6920e6
 					<li class=" menu__item"><a class="menu__link" href="#">Giới Thiệu</a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">Liên Hệ</a></li>
 				  </ul>
