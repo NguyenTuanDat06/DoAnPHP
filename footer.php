@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Web</title>
 
 <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- pignose css -->
@@ -22,8 +18,6 @@
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 <script src="public/js/jquery.easing.min.js"></script>
-</head>
-<body>
 
 <div class="coupons">
 	<div class="container">
@@ -88,6 +82,3 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
-<!-- //footer -->
-</body>
-</html>

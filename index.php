@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start();
+include_once 'config/db_data.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,10 +32,37 @@
 <!-- header -->
     <?php
         include_once "header.php";
-    ?>
+    if(isset($_GET['act'])){
+        $act = $_GET['act'];
+        switch($act){
+            case 'login':
+                include_once "login.php";
+                break;
+            case 'thoat':
+                include_once "login.php";
+                break;
+            case 'fooddog':
+                include_once "fooddog.php";
+                break;
+            case 'foodcat':
+                include_once "foodcat.php";
+                break;
+            case 'pkdog':
+                include_once "pkdog.php";
+                break;
+            case 'pkmeo':
+                include_once "pkmeo.php";
+                break;
 
-<!-- footer -->
-<?php
+
+            default:
+            include_once "home.php";
+            break;
+        }
+    }
+    else{
+        include_once "home.php";
+    }
         include_once "footer.php";
     ?>
 <!-- //footer -->
