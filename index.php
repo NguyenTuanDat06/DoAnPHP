@@ -38,19 +38,16 @@ include_once 'config/db_data.php';
             case 'login':
                 include_once "login.php";
                 break;
-<<<<<<< HEAD
+
             case 'thoat':
                 include_once "login.php";
                 break;
-=======
->>>>>>> 2003158e71162cf1e893b7dfb9363e71fa6920e6
             case 'fooddog':
                 include_once "fooddog.php";
                 break;
             case 'foodcat':
                 include_once "foodcat.php";
                 break;
-<<<<<<< HEAD
             case 'pkdog':
                 include_once "pkdog.php";
                 break;
@@ -59,9 +56,7 @@ include_once 'config/db_data.php';
                 break;
 
 
-=======
 
->>>>>>> 2003158e71162cf1e893b7dfb9363e71fa6920e6
             default:
             include_once "home.php";
             break;
