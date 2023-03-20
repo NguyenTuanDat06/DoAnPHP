@@ -28,7 +28,7 @@ $query = mysqli_query($conn,$sql);
                             <span class="item_price">
                               <?php  echo $row['SoLuongTon']; ?>
                             </span>
-						</div>								
+						</div>							
 					</div>
 				</div>
 			</div>

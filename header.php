@@ -26,7 +26,7 @@ include_once 'config/db_data.php';
 </head>
 <body>
 <?php
-if(isset($_SESSION['email'])&& $_SESSION['email']!=""){
+if(isset($_SESSION['email']) && $_SESSION['email']!=""){
 	echo '<div class="header">
 			<div class="container">
 			<ul>
@@ -45,7 +45,7 @@ else{
 	<div class="container">
 		<ul>
 			<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="login.php?act=login">Đăng Nhập</a></li>
-			<li><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span><a href="#">Đăng Kí</a></li>
+			<li><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span><a href="index.php?act=register">Đăng Kí</a></li>
 			<li><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span><a href="#">Quên Mật Khẩu</a></li>
 
 		</ul>
@@ -111,15 +111,9 @@ else{
 				  <ul class="nav navbar-nav menu__list">
                     <li class=" menu__item"><a class="menu__link" href="index.php">Trang Chủ</a></li>
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=fooddog">Thức Ăn Chó</a></li>
-<<<<<<< HEAD
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkdog">Dụng Cụ chó</a></li>
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat">Thức Ăn Mèo</a></li>
 					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkmeo">Dụng Cụ Mèo</a></li>
-=======
-					<li class=" menu__item"><a class="menu__link" href="#">Dụng Cụ chó</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat">Thức Ăn Mèo</a></li>
-					<li class=" menu__item"><a class="menu__link" href="#">Dụng Cụ Mèo</a></li>
->>>>>>> 2003158e71162cf1e893b7dfb9363e71fa6920e6
 					<li class=" menu__item"><a class="menu__link" href="#">Giới Thiệu</a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">Liên Hệ</a></li>
 				  </ul>

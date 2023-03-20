@@ -38,10 +38,14 @@ include_once 'config/db_data.php';
             case 'login':
                 include_once "login.php";
                 break;
-
             case 'thoat':
-                include_once "login.php";
+                unset($_SESSION['email']);
+                unset($_SESSION['psw']);
+                header('location:index.php');
                 break;
+            case 'register':
+                include_once "register.php";
+                break;    
             case 'fooddog':
                 include_once "fooddog.php";
                 break;
@@ -54,8 +58,9 @@ include_once 'config/db_data.php';
             case 'pkmeo':
                 include_once "pkmeo.php";
                 break;
-
-
+            case 'detail':
+                include_once "detailfood.php";
+                break;
 
             default:
             include_once "home.php";
