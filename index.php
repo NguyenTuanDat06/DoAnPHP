@@ -31,41 +31,46 @@ include_once 'config/db_data.php';
 <body>
 <!-- header -->
     <?php
-        include_once "header.php";
+        include_once "views/share/header.php";
     if(isset($_GET['act'])){
         $act = $_GET['act'];
         switch($act){
             case 'login':
-                include_once "login.php";
+                include_once "views/login.php";
                 break;
-
             case 'thoat':
-                include_once "login.php";
+                unset($_SESSION['email']);
+                unset($_SESSION['psw']);
+                header('location:index.php');
                 break;
+            case 'register':
+                include_once "views/register.php";
+                break;    
             case 'fooddog':
-                include_once "fooddog.php";
+                include_once "views/fooddog.php";
                 break;
             case 'foodcat':
-                include_once "foodcat.php";
+                include_once "views/foodcat.php";
                 break;
             case 'pkdog':
-                include_once "pkdog.php";
+                include_once "views/pkdog.php";
                 break;
             case 'pkmeo':
-                include_once "pkmeo.php";
+                include_once "views/pkmeo.php";
+                break;
+            case 'detail':
+                include_once "detailfood.php";
                 break;
 
-
-
             default:
-            include_once "home.php";
+            include_once "views/home.php";
             break;
         }
     }
     else{
-        include_once "home.php";
+        include_once "views/home.php";
     }
-        include_once "footer.php";
+        include_once "views/share/footer.php";
     ?>
 <!-- //footer -->
 </body>
