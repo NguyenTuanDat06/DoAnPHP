@@ -44,7 +44,11 @@ include_once 'config/db_data.php';
                 header('location:index.php');
                 break;
             case 'register':
+<<<<<<< HEAD
                 include_once "views/register.php";
+=======
+                include_once "register.php";
+>>>>>>> 13c5ad513d20018b0c73bd604b54f183d5eb09b4
                 break;    
             case 'fooddog':
                 include_once "views/fooddog.php";
@@ -61,6 +65,12 @@ include_once 'config/db_data.php';
             case 'detail':
                 include_once "detailfood.php";
                 break;
+<<<<<<< HEAD
+=======
+            case 'detail':
+                include_once "detailfood.php";
+                break;
+>>>>>>> 13c5ad513d20018b0c73bd604b54f183d5eb09b4
 
             default:
             include_once "views/home.php";
