@@ -28,7 +28,8 @@ $query = mysqli_query($conn,$sql);
                             <span class="item_price">
                                 <?php echo $row['SoLuongTon']; ?>
                             </span>
-						</div>								
+						</div>
+						<button> <a href="index.php?act=detail&idfood=<?php echo $row['MaThucAn']?>">Chi Tiết</a></button>									
 					</div>
 				</div>
 			</div>

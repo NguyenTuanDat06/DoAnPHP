@@ -12,6 +12,7 @@ $query = mysqli_query($conn,$sql);
     while($row = mysqli_fetch_array($query))
     {
     $img = $row['Hinh'];
+	$_GET['MaThucAc'] = $row['MaThucAn'];
 ?>
 <div class="col-md-3 product-men">
 				<div class="men-pro-item simpleCart_shelfItem">
@@ -28,7 +29,9 @@ $query = mysqli_query($conn,$sql);
                             <span class="item_price">
                               <?php  echo $row['SoLuongTon']; ?>
                             </span>
-						</div>							
+						</div>
+						<button> <a href="index.php?act=detail&idfood=<?php echo $row['MaThucAn']?>">Chi Tiết</a></button>	
+						<button> <a href="">Đăt Hàng</a></button>								
 					</div>
 				</div>
 			</div>

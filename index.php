@@ -36,15 +36,16 @@ include_once 'config/db_data.php';
         $act = $_GET['act'];
         switch($act){
             case 'login':
-                include_once "views/login.php";
+                include_once "login.php";
                 break;
             case 'thoat':
                 unset($_SESSION['email']);
                 unset($_SESSION['psw']);
+                unset($_SESSION['TenKH']);
                 header('location:index.php');
                 break;
             case 'register':
-                include_once "views/register.php";
+                include_once "register.php";
                 break;    
             case 'fooddog':
                 include_once "views/fooddog.php";
@@ -59,7 +60,7 @@ include_once 'config/db_data.php';
                 include_once "views/pkmeo.php";
                 break;
             case 'detail':
-                include_once "detailfood.php";
+                include_once "views/detailfood.php";
                 break;
 
             default:
@@ -72,6 +73,9 @@ include_once 'config/db_data.php';
     }
         include_once "views/share/footer.php";
     ?>
+
 <!-- //footer -->
 </body>
 </html>
+
+
