@@ -5,7 +5,6 @@ include_once 'config/db_data.php';
 <html>
 <head>
 <title>Web</title>
-
 <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- pignose css -->
 <link href="public/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
@@ -26,17 +25,15 @@ include_once 'config/db_data.php';
 </head>
 <body>
 <?php
-if(isset($_SESSION['email']) && $_SESSION['email']!=""){
+if(isset($_SESSION['TenKH']) && $_SESSION['TenKH']!=""){
 	echo '<div class="header">
 			<div class="container">
 			<ul>
-				<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a>Xin Chào : '.$_SESSION['email'].'</a></li>
+				<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a>Xin Chào : '.$_SESSION['TenKH'].'</a></li>
 				<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href ="index.php?act=thoat">Thoát</a></li>
 			</ul>
 			</div>
 		</div>';
-	
-
 }
 else{
 	?>
@@ -110,10 +107,10 @@ else{
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
                     <li class=" menu__item"><a class="menu__link" href="index.php">Trang Chủ</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=fooddog">Thức Ăn Chó</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkdog">Dụng Cụ chó</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat">Thức Ăn Mèo</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkmeo">Dụng Cụ Mèo</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=fooddog&id=1">Thức Ăn Chó</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkdog&id=3">Dụng Cụ chó</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat&id=2">Thức Ăn Mèo</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkmeo&id=4">Dụng Cụ Mèo</a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">Giới Thiệu</a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">Liên Hệ</a></li>
 				  </ul>

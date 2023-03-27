@@ -1,9 +1,8 @@
 <?php
-ob_start();
 session_start();
-include_once 'config/db_data.php';
+include_once './config/db_data.php';
 
-if(isset($_POST['submit'])){
+if(isset($_POST["submit"])){
 	$email = $_POST['email'];
 	$mk = $_POST['psw'];
 
@@ -17,6 +16,7 @@ if(isset($_POST['submit'])){
         header("Location: admin/admin.php");
       }
       else{
+			$_SESSION["TenKH"] = $rows['TenKH'];
 			$_SESSION["email"] = $email;
 			$_SESSION["psw"] = $mk;
 			header("Location: index.php");
@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
 
 <link href="public/css/style2.css" rel="stylesheet"/>
  <!-- header -->
-<form action="login.php" method="post" >
+ <form action="login.php" method="post" >
    <div class="container">
      <h1>Đăng Nhập</h1>
      <p>Xin hãy nhập biểu mẫu bên dưới để đăng nhập</p>
@@ -52,7 +52,7 @@ if(isset($_POST['submit'])){
  <!-- footer -->
 <?php
         include_once "views/share/footer.php";
-    ?>
+?>
 
 
 

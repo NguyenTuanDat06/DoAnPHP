@@ -48,16 +48,16 @@ include_once 'config/db_data.php';
                 include_once "register.php";
                 break;    
             case 'fooddog':
-                include_once "views/fooddog.php";
+                include_once "views/listfood.php";
                 break;
             case 'foodcat':
-                include_once "views/foodcat.php";
+                include_once "views/listfood.php";
                 break;
             case 'pkdog':
-                include_once "views/pkdog.php";
+                include_once "views/listfood.php";
                 break;
             case 'pkmeo':
-                include_once "views/pkmeo.php";
+                include_once "views/listfood.php";
                 break;
             case 'detail':
                 include_once "views/detailfood.php";
