@@ -55,14 +55,14 @@
 					</div>
 					<div class="mid-text">
 						<h4>Hàng Ngàn Lượt Mua</h4>
-						<a class="hvr-outline-out button2" href="index.php?act=foodcat">Shop now </a>
+						<a class="hvr-outline-out button2" href="index.php?act=listfood&id=2">Shop now </a>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				<div class="new-levis">
 					<div class="mid-text">
 						<h4>Nhiều Lượt Truy Cập</h4>
-						<a class="hvr-outline-out button2" href="index.php?act=fooddog">Shop now </a>
+						<a class="hvr-outline-out button2" href="index.php?act=listfood&id=1">Shop now </a>
 					</div>
 					<div class="mid-img">
 						<img src="public/images/cho2.jfif" alt=" " />

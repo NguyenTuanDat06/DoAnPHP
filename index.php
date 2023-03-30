@@ -47,22 +47,15 @@ include_once 'config/db_data.php';
             case 'register':
                 include_once "register.php";
                 break;    
-            case 'fooddog':
-                include_once "views/listfood.php";
-                break;
-            case 'foodcat':
-                include_once "views/listfood.php";
-                break;
-            case 'pkdog':
-                include_once "views/listfood.php";
-                break;
-            case 'pkmeo':
+            case 'listfood':
                 include_once "views/listfood.php";
                 break;
             case 'detail':
                 include_once "views/detailfood.php";
                 break;
-
+            case 'giohang':
+                include_once "views/giohang/giohang.php";
+                break;
             default:
             include_once "views/home.php";
             break;

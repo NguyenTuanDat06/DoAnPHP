@@ -53,7 +53,7 @@ $query = mysqli_query($conn,$sql);
 	<h4 style="font-size: 18px;" > <?php  echo $row['SoLuongTon']; ?> </h4>
 	</dd>
 	<hr />
-	<button> <a href="index.php?act=fooddog">Quay Lại</a></button>	
+	<button> <a href="#">Quay Lại</a></button>	
 </dl>
 <?php
 	}

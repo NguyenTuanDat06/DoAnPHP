@@ -6,7 +6,24 @@ $query = mysqli_query($conn,$sql);
 ?>
 <div class="page-head">
 	<div class="container">
-		<h3>Thức Ăn Cho Chó</h3>
+		<?php if($id ==1)
+		{?>
+			<h3>Thức Ăn Cho Chó</h3>
+			<?php
+		}else
+		if($id ==2){?>
+		<h3>Thức Ăn Cho Mèo</h3>
+		<?php
+		} else
+		if($id ==3)
+		{?>
+			<h3>Dụng Cụ Của Chó</h3>
+			<?php
+		}else
+		if($id ==4){?>
+		<h3>Dụng Cụ Của Mèo</h3>
+		<?php
+		} ?>?>
 	</div>
 </div>
 <?php 
@@ -31,7 +48,7 @@ $query = mysqli_query($conn,$sql);
                             </span>
 						</div>
 						<button> <a href="index.php?act=detail&idfood=<?php echo $row['MaThucAn']?>">Chi Tiết</a></button>	
-						<button> <a href="">Đăt Hàng</a></button>								
+						<button> <a href="views/giohang/themhang.php?idfood=<?php echo $row['MaThucAn']?>">Đăt Hàng</a></button>								
 					</div>
 				</div>
 			</div>

@@ -107,10 +107,10 @@ else{
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
                     <li class=" menu__item"><a class="menu__link" href="index.php">Trang Chủ</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=fooddog&id=1">Thức Ăn Chó</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkdog&id=3">Dụng Cụ chó</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=foodcat&id=2">Thức Ăn Mèo</a></li>
-					<li class=" menu__item"><a class="menu__link" href="index.php?act=pkmeo&id=4">Dụng Cụ Mèo</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=listfood&id=1">Thức Ăn Chó</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=listfood&id=3">Dụng Cụ chó</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=listfood&id=2">Thức Ăn Mèo</a></li>
+					<li class=" menu__item"><a class="menu__link" href="index.php?act=listfood&id=4">Dụng Cụ Mèo</a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">Giới Thiệu</a></li>
 					<li class=" menu__item"><a class="menu__link" href="#">Liên Hệ</a></li>
 				  </ul>
@@ -120,10 +120,10 @@ else{
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
-						<a href="#">
+						<a href="index.php?act=giohang">
 							<h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> Sản Phẩm)</div>
+								<span><?php if(isset($_SESSION['giohang'])){ echo count($_SESSION['giohang']);}else{echo 0;} ?></span> Sản Phẩm</div>
 							</h3>
 						</a>
 			</div>	
