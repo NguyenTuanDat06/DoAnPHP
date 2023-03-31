@@ -56,6 +56,12 @@ include_once 'config/db_data.php';
             case 'giohang':
                 include_once "views/giohang/giohang.php";
                 break;
+            case 'muahang':
+                include_once "views/giohang/muahang.php";
+                break; 
+            case 'hoanthanh':
+                include_once "views/giohang/hoanthanh.php";
+                break;      
             default:
             include_once "views/home.php";
             break;

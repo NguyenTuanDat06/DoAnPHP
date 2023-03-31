@@ -1,18 +1,7 @@
 <?php
     if(isset($_SESSION['giohang'])){
-		if(isset($_POST['sl'])){
-			foreach($_POST['sl'] as $id => $sl){
-				if($sl == 0){
-					unset($_SESSION['giohang'][$id]);
-				}else
-					if($sl>0){
-						$_SESSION['giohang'][$id] = $sl;
-				}
-			}
-		}
-
         $arrid = array();
-        foreach($_SESSION['giohang'] as $id => $so_luong){
+        foreach($_SESSION['giohang'] as $id => $sl){
             $arrid[]=$id;
         }
         $strid = implode(',',$arrid);
@@ -21,7 +10,7 @@
 ?>
 <div class="page-head">
 	<div class="container">
-		<h3>Check Out</h3>
+		<h3>Xác Nhận Đơn Hàng</h3>
 	</div>
 </div>
 <form id="giohang" method = "post">
@@ -32,7 +21,6 @@
 			<table class="timetable_sub">
 				<thead>
 					<tr>
-						<th>Xóa</th>
 						<th>Tên Sản Phẩm</th>
 						<th>Hình Ảnh</th>
 						<th>Giá Bán</th>
@@ -47,11 +35,6 @@
 						$img = $row['Hinh'];
 				?>
 				<tr class="rem1">
-						<td class="invert-closeb">
-							<div class="rem">
-								<a href="views/giohang/xoahang.php?idfood=<?php echo $row['MaThucAn'] ?>">Xóa</a>
-							</div>
-						</td>
 						<td class="invert"><?php echo  $row['TenThucAn']; ?></td>
 						<td class="invert-image"><?php echo "<img width=50 height=50 src=$img>" ?></td>
 						<td class="invert"><?php echo  $row['GiaBan']; ?></td>
@@ -63,17 +46,49 @@
 						<td class="invert"><?php echo  $totalPrice; ?></td>
 				</tr>
 					<?php
+                    $totalPriceAll += $totalPrice;
 					}?>
+                <tr >
+						<td>Tổng Giá Trị Đơn Hàng</td>
+                        <td colspan="3"></td>
+                        <td><b><span><?php echo $totalPriceAll; ?></span></b></td>
+				</tr>    
 			</table>			
 		</div>
-		<button><a onclick="document.getElementById('giohang').submit();" href="#">Cập Nhập Giỏ Hàng</a></button> 
-		<button><a href="views/giohang/xoahang.php?idfood=0">Xóa Hết Giỏ Hàng</a></button>
-		<button><a href="index.php?act=muahang">Thanh Toán</a></button>
 	</div>
 </div>
 </form>	
 <?php
-}else
-{
-    echo '<script>alert("Giỏ Hàng Bạn Trống")</script>';
-}?>
+if(isset($_POST["submit"])){
+	$name = $_POST['name'];
+	$mail = $_POST['mail'];
+    $sdt = $_POST['sdt'];
+	$add = $_POST['add'];
+
+	if(isset($name) && isset($mail) && isset($sdt) && isset($add)){
+       header('location index.php?act=hoanthanh'); 
+	}
+}
+?>
+<div id="custom-form" class="container ">
+    <form method="post">
+        <div class="form-group">
+            <label>Tên Khách Hàng</label>
+            <input required type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input required type="text" class="form-control" name="mail">
+        </div>
+        <div class="form-group">
+            <label>Số Điện Thoại</label>
+            <input required type="text" class="form-control" name="sdt">
+        </div>
+        <div class="form-group">
+            <label>Đỉa chỉ nhận hàng</label>
+            <input required type="text" class="form-control" name="add">
+        </div>
+        <button class="btn btn-default" name="submit">Mua Hàng</button>
+    </form>
+</div>
+<?php } ?>
