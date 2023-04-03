@@ -3,6 +3,7 @@ $dbHost = "localhost";
 $dbUser = "root";
 $dbPass ="";
 $dbName = "doanphp";
+global $conn;
 
 $conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 if($conn){

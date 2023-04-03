@@ -59,16 +59,7 @@
 </div>
 </form>	
 <?php
-if(isset($_POST["submit"])){
-	$name = $_POST['name'];
-	$mail = $_POST['mail'];
-    $sdt = $_POST['sdt'];
-	$add = $_POST['add'];
 
-	if(isset($name) && isset($mail) && isset($sdt) && isset($add)){
-       header('location index.php?act=hoanthanh'); 
-	}
-}
 ?>
 <div id="custom-form" class="container ">
     <form method="post">
@@ -88,7 +79,7 @@ if(isset($_POST["submit"])){
             <label>Đỉa chỉ nhận hàng</label>
             <input required type="text" class="form-control" name="add">
         </div>
-        <button class="btn btn-default" name="submit">Mua Hàng</button>
+        <button class="btn btn-default" name="submit"><a href="index.php?act=hoanthanh">Mua Hang</a></button>
     </form>
 </div>
 <?php } ?>

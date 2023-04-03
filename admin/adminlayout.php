@@ -42,7 +42,7 @@
                           </a>
                       </li>
                       <li class=" ">
-                          <a href="dsloaiSP.php">
+                          <a href="adminlayout.php?act=dsloaiSP">
                               <svg class="svg-icon" id="p-dash2" width="20" height="20"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
                                   <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                               </svg>
@@ -50,7 +50,7 @@
                           </a>
                       </li>
                       <li class=" ">
-                          <a href="dsSP.php">
+                          <a href="adminlayout.php?act=dsSP">
                               <svg class="svg-icon" id="p-dash4" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path>
                               </svg>
@@ -58,7 +58,7 @@
                           </a>
                       </li>
                       <li class=" ">
-                          <a href="#purchase" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                          <a href="#" class="collapsed" data-toggle="collapse" aria-expanded="false">
                               <svg class="svg-icon" id="p-dash5" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                                   <line x1="1" y1="10" x2="23" y2="10"></line>
                               </svg>
@@ -69,14 +69,14 @@
                           </a>
                           <ul id="purchase" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                                   <li class="">
-                                          <a href="../backend/page-list-purchase.html">
+                                          <a href="#">
                                               <i class="las la-minus"></i><span>Danh Sách Khách Hàng</span>
                                           </a>
                                   </li>
                           </ul>
                       </li>
                       <li class=" ">
-                          <a href="#return" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                          <a href="#" class="collapsed" data-toggle="collapse" aria-expanded="false">
                               <svg class="svg-icon" id="p-dash6" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                   <polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" y1="10" x2="21" y2="3"></line><line x1="3" y1="21" x2="10" y2="14"></line>
                               </svg>
@@ -183,7 +183,44 @@
                   </div>
               </nav>
           </div>
-      </div>    
+      </div> 
+      <?php
+    if(isset($_GET['act'])){
+        $act = $_GET['act'];
+        switch($act){
+            case 'dsloaiSP':
+                include_once "./dsloaiSP.php";
+                break;
+            case 'themdanhmuc':
+                include_once "./themdanhmuc.php";
+                break;
+            case 'suadm':
+                include_once "./suadm.php";
+                break;
+            case 'dsSP':
+                include_once "./dsSP.php";
+                break;
+            case 'xoadm':
+                include_once "./xoadm.php";
+                break;
+            case 'themsanpham':
+                include_once "./themsanpham.php";
+                break;   
+            case 'suasp':
+                include_once "./suasanpham.php";
+                break;
+            case 'xoasp':
+                include_once "./xoasanpham.php";
+                break;    
+            default:
+            include_once "admin.php";
+            break;
+        }
+    }
+    else{
+        include_once "admin.php";
+    }
+    ?> 
     </div>
     <script src="public2/js/backend-bundle.min.js"></script>
     

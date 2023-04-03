@@ -1,5 +1,10 @@
+<script>
+    function Xoadanhmuc(){
+        var conf = confirm("bạn có muốn xóa không ?");
+        return conf;
+    }
+</script>
 <?php
-    include_once "adminlayout.php";
     include_once '../config/db_data.php';
         $sql = " SELECT * From theloai ";
         $query = mysqli_query($conn,$sql);
@@ -12,7 +17,7 @@
                     <div>
                         <h4 class="mb-3">Danh Sách Loại Sản Phẩm</h4>
                     </div>
-                    <a href="#" class="btn btn-primary add-list"><i class="las la-plus mr-3"></i>Thêm Loại Sản Phẩm</a>
+                    <a href="adminlayout.php?act=themdanhmuc" class="btn btn-primary add-list"><i class="las la-plus mr-3"></i>Thêm Loại Sản Phẩm</a>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -33,12 +38,12 @@
                         <tr>
                             <td><?php echo $row['MaLoai']; ?></td>
                             <td><?php echo $row['TenLoai']; ?></td>
-                            <td>
+                            <td>    
                                 <div class="d-flex align-items-center list-action">
                                     <a class="badge bg-success mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"
-                                        href="#"><i class="ri-pencil-line mr-0"></i></a>
-                                    <a class="badge bg-warning mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"
-                                        href="#"><i class="ri-delete-bin-line mr-0"></i></a>
+                                        href="adminlayout.php?act=suadm&iddm=<?php echo $row['MaLoai']; ?>"><i class="ri-pencil-line mr-0"></i></a>
+                                    <a onclick="return Xoadanhmuc();" class="badge bg-warning mr-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"
+                                        href="adminlayout.php?act=xoadm&iddm=<?php echo $row['MaLoai']; ?>"><i class="ri-delete-bin-line mr-0"></i></a>
                                 </div>
                             </td>
                         </tr>
